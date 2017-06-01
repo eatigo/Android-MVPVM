@@ -56,4 +56,7 @@ class LoginActivity : AppCompatActivity(), ILogin.IView {
         startActivity(intent)
     }
 
+    override fun getMyTitle(): String {
+        return ""
+    }
 }

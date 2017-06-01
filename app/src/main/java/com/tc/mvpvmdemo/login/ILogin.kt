@@ -12,6 +12,8 @@ interface ILogin {
         fun closeDialog() //关闭弹窗
 
         fun jumpToUserInfo() //跳转到用户信息页面
+
+        fun getMyTitle(): String
     }
 
     interface IPresenter {

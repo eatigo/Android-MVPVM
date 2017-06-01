@@ -22,6 +22,7 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
         main.jniLibs.srcDirs = ['libs']
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
     }
     packagingOptions {
         exclude 'META-INF/notice.txt'
@@ -43,6 +44,11 @@ dependencies {
     compile 'com.google.code.gson:gson:2.7'
     testCompile 'junit:junit:4.12'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    testCompile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+    testCompile "com.nhaarman:mockito-kotlin:1.1.0"
+    testCompile 'org.amshove.kluent:kluent:1.14'
 }
 repositories {
     mavenCentral()
@@ -51,5 +57,13 @@ repositories {
 configurations.all {
     resolutionStrategy {
         force "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    }
+}
+
+afterEvaluate {
+    android.sourceSets.all { sourceSet ->
+        if (!sourceSet.name.startsWith('test') || !sourceSet.name.startsWith('androidTest')) {
+            sourceSet.kotlin.setSrcDirs([])
+        }
     }
 }

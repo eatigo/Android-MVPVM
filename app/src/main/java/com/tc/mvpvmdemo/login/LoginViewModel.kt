@@ -28,7 +28,7 @@ class LoginViewModel : BaseObservable() {
             field = userName
             notifyPropertyChanged(BR.userName)
         }
-    
+
     @get:Bindable
     var password: String? = ""
         set(password) {

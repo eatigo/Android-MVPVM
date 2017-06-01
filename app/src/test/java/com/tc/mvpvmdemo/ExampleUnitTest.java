@@ -1,5 +1,7 @@
 package com.tc.mvpvmdemo;
 
+import com.tc.mvpvmdemo.login.LoginPresenter;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
