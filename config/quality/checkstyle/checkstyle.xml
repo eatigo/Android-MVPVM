@@ -27,7 +27,7 @@
     <!-- Checks whether files end with a new line. -->
     <!-- See http://checkstyle.sf.net/config_misc.html#NewlineAtEndOfFile -->
     <module name="NewlineAtEndOfFile">
-        <property name="severity" value="ignore"/>
+        <property name="severity" value="error"/>
     </module>
 
     <!-- Checks that property files contain the same keys. -->
@@ -254,6 +254,19 @@
             <property name="exceptionVariableName" value="expected"/>
         </module>
         <module name="CommentsIndentation"/>
+        <module name="Regexp">
+            <property name="format" value="^\s*//[^\s/]"/>
+            <property name="illegalPattern" value="true"/>
+            <property name="message" value="The comment must start with a space."/>
+        </module>
+        <module name="Regexp">
+            <property name="format" value="\n\s*\n\s*}"/>
+            <property name="illegalPattern" value="true"/>
+            <property name="message"
+                value="Remove extra line break (there must be no extra line break before the curly brace '}')."/>
+        </module>
+        <module name="TrailingComment"/>
+        <module name="UpperEll" />
     </module>
 
     <module name="SuppressionFilter">

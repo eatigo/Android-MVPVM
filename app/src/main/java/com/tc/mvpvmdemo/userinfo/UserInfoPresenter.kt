@@ -58,5 +58,6 @@ class UserInfoPresenter(private val mView: IUserInfo.IView, private val mViewMod
         mViewModel.specialty = model.specialty
         mViewModel.advantage = model.advantage
         mViewModel.createTime = SimpleDateFormat("yyyy.MM.dd HH:mm").format(Date(model.createTime))
+
     }
 }
