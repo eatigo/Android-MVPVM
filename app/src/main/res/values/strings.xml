@@ -18,4 +18,5 @@
     <string name="spacial">特 长</string>
     <string name="advantages">优 势</string>
     <string name="lasted_update" translatable="false">创建时间</string>
+    <string name="lasted_update2" translatable="false">创建时间</string>
 </resources>
