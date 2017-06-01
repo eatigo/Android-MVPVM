@@ -64,9 +64,8 @@ public class LoginActivityTest {
         }
 
         ViewInteraction linearLayout = onView(
-                allOf(childAtPosition(
-                        allOf(withId(R.id.activity_user_info),
-                                childAtPosition(
+                allOf(childAtPosition(allOf(withId(R.id.activity_user_info)
+                        , childAtPosition(
                                         withId(android.R.id.content),
                                         0)),
                         0),
@@ -85,7 +84,6 @@ public class LoginActivityTest {
                                 0),
                         isDisplayed()));
         textView.check(matches(withText("登录")));
-
     }
 
     private static Matcher<View> childAtPosition(

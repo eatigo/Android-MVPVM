@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- Change the severity of hardcoded strings to "error" -->
+    <issue id="HardcodedText" severity="fatal" />
+    <issue id="ContentDescription" severity="ignore" />
+    <issue id="CutPasteId" severity="fatal" />
+    <issue id="Deprecated" severity="error" />
+    <issue id="ShowToast" severity="error" />
+    <issue id="WrongViewCast" severity="error" />
+</lint>

@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'checkstyle'
 
 android {
     compileSdkVersion 25
@@ -29,6 +30,12 @@ android {
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/license.txt'
+    }
+    lintOptions {
+        abortOnError true
+        lintConfig file("${project.rootDir}/config/quality/lint/lint.xml")
+        htmlReport true
+        htmlOutput file("$project.buildDir/reports/lint/lint.html")
     }
     dataBinding.enabled true
 }
@@ -67,3 +74,19 @@ afterEvaluate {
         }
     }
 }
+
+task checkstyle(type: Checkstyle) {
+    configFile file("${project.rootDir}/config/quality/checkstyle/checkstyle.xml")
+    configProperties.suppressionsPath =
+            file("${project.rootDir}/config/quality/checkstyle/checkstyle_suppressions.xml") ;
+    source 'src'
+    include '**/*.kt', '**/*.java'
+    exclude '**/gen/**'
+    classpath = files()
+}
+
+checkstyle {
+    toolVersion = '6.14'
+}
+
+check.dependsOn 'checkstyle', 'lint'

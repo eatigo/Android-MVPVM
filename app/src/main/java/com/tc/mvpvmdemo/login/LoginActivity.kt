@@ -18,7 +18,7 @@ class LoginActivity : AppCompatActivity(), ILogin.IView {
 
     internal var binding: ActivityLoginBinding? = null
     internal var presenter: LoginPresenter? = null
-    internal var dialog: ProgressDialog? = null
+    internal var dialosg: ProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,16 +38,16 @@ class LoginActivity : AppCompatActivity(), ILogin.IView {
     }
 
     override fun showDialog(content: String) {
-        if (dialog == null) {
-            dialog = ProgressDialog(this)
+        if (dialosg == null) {
+            dialosg = ProgressDialog(this)
         }
-        dialog!!.setMessage(content)
-        dialog!!.show()
+        dialosg!!.setMessage(content)
+        dialosg!!.show()
     }
 
     override fun closeDialog() {
-        if (dialog != null && dialog!!.isShowing) {
-            dialog!!.hide()
+        if (dialosg != null && dialosg!!.isShowing) {
+            dialosg!!.hide()
         }
     }
 

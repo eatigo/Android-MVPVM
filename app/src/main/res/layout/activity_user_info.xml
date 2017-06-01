@@ -59,7 +59,7 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="性　　别"
+                android:text="@string/gender"
                 android:textSize="18sp" />
 
             <TextView
@@ -82,13 +82,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="国　　籍"
+                android:text="@string/nationality"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:text="@{viewModel.nationality}"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
@@ -105,13 +106,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="特　　长"
+                android:text="@string/spacial"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:text="@{viewModel.specialty}"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
@@ -128,13 +130,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="优　　势"
+                android:text="@string/advantages"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:text="@{viewModel.advantage}"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
@@ -151,13 +154,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="创建时间"
+                android:text="@string/lasted_update"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:text="@{viewModel.createTime}"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
