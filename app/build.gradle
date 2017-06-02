@@ -34,8 +34,8 @@ android {
     lintOptions {
         abortOnError true
         lintConfig file("${project.rootDir}/config/quality/lint/lint.xml")
-        htmlReport true
-        htmlOutput file("$System.env.BUDDYBUILD_TEST_DIR/Build/Intermediates/reports/lint/lint.html")
+        textReport true
+        htmlReport false
     }
     dataBinding.enabled true
 }
