@@ -121,4 +121,4 @@ checkstyle {
     toolVersion = '6.14'
 }
 
-check.dependsOn 'checkstyle', 'lint', 'jacocoTestReport'
+check.dependsOn 'checkstyle', 'lint'
