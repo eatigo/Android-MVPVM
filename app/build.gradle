@@ -65,8 +65,8 @@ android {
     lintOptions {
         abortOnError true
         lintConfig file("${project.rootDir}/config/quality/lint/lint.xml")
-        htmlReport true
-        htmlOutput file("$project.buildDir/reports/lint/lint.html")
+        textReport true
+        htmlReport false
     }
     dataBinding.enabled true
 }
